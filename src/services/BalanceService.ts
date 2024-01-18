@@ -11,6 +11,9 @@ export async function asyncBuyCoin(user_id: number, currency: string, quantity: 
   catch(e:any){
     console.log(e?.message);
   }
+  finally{
+    location.reload()
+  }
 }
 export async function asyncSellCoin(user_id: number, currency: string, quantity: number) {
   try{
@@ -22,6 +25,9 @@ export async function asyncSellCoin(user_id: number, currency: string, quantity:
   catch(e:any){
     console.log(e?.message);
   }
+  finally{
+    location.reload()
+  }
 }
 export async function asyncSwapCoin(user_id: number, currency: string|null, currency_2: string|null, quantity: number|null) {
   try{
@@ -31,6 +37,9 @@ export async function asyncSwapCoin(user_id: number, currency: string|null, curr
   }
   catch(e:any){
     console.log(e?.message);
+  }
+  finally{
+    location.reload()
   }
 }
 export async function getBalance(user_id: number, token: string) {
